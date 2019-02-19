@@ -1,9 +1,12 @@
 import { TOGGLE } from '../actions/index';
-export const toggle = (state = false, action) => {
+var initstalState = false
+
+ const toggle = (state = initstalState, action) => {
     switch (action.type) {
         case TOGGLE:
-            return state = true
+            return state = !state
         default:
             return state;
     }
 }
+export default toggle;
