@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {toggle} from '../actions/index';
 import {ToggleBar} from './ToggleBar';
 const mapStateToProps = (state) => {
     return {
@@ -9,9 +8,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        toggledemo: (options) => {
-            dispatch(toggle(options))
-        }
+        toggledemo: () =>  dispatch({ type: "TOGGLE", value: false }),
     }
 }
 const ToggleConatiner = connect(
