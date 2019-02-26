@@ -1,20 +1,7 @@
-import { takeLatest, put, all, fork } from "redux-saga/effects";
+import { fork, all } from "redux-saga/effects";
+import watchToggle from './toggle';
+import watchShow from './show';
 
-function* toggleAsync() {
-    yield put({ type: "TOGGLE_ASYNC" });
-}
-
-function* watchToggle() {
-    yield takeLatest("TOGGLE", toggleAsync);
-}
-
-function* showAsync() {
-    yield put({ type: "SHOW_ASYNC" });
-}
-
-function* watchShow() {
-    yield takeLatest("SHOW", showAsync);
-}
 export default function* root() {
     yield all([
         fork(watchToggle),

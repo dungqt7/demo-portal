@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ShowBar } from './Show';
+import { SHOW_ASYNC } from "../actions/index";
+
 const mapStateToProps = (state) => {
     return {
         show: state.show
@@ -8,7 +10,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        show: () => dispatch({ type: "SHOW", value: false }),
+        showTooltip: () =>dispatch({ type: SHOW_ASYNC }),
     }
 }
 const ShowConatiner = connect(

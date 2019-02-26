@@ -1,10 +1,10 @@
 import { SHOW } from '../actions/index';
-var initstalState = false
+import initialState from './initialState';
 
-const show = (state = initstalState, action) => {
+const show = (state = initialState.show, action) => {
     switch (action.type) {
         case SHOW:
-            return state = !state
+            return !action.value
         default:
             return state;
     }

@@ -1,12 +1,4 @@
-export const TOGGLE = 'TOGGLE_ASYNC';
-export const toggle = () => {
-    return {
-        type: TOGGLE
-    }
-}
-export const SHOW = 'SHOW_ASYNC';
-export const show = () => {
-    return {
-        type: SHOW
-    }
-}
+export const TOGGLE_ASYNC = 'TOGGLE_ASYNC';
+export const TOGGLE = 'TOGGLE';
+export const SHOW_ASYNC = 'SHOW_ASYNC';
+export const SHOW = 'SHOW';

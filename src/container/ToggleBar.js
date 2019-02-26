@@ -2,11 +2,9 @@ import React from 'react';
 import Portal from '../Portal';
 export const ToggleBar = props => {
     const on = props.toggle;
+    
   return (
       <div>
-            <header>
-                <h1>Demo Portal</h1>
-            </header>
             <React.Fragment>
               <button onClick={() => props.toggledemo()}> Toggle Portal </button>
               <Portal>
