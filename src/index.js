@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {  createStore, applyMiddleware  } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers/index";
 import createSagaMiddleware from "redux-saga";
-import {watchToggle} from "./sagas/index";
+import root from "./sagas/index";
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(watchToggle);
+sagaMiddleware.run(root);
 
-ReactDOM.render(
-    <Provider store = {store}>
-      <App />
-    </Provider>
-, 
-document.getElementById('root'));
+ReactDOM.render( <
+    Provider store = { store } >
+    <
+    App / >
+    <
+    /Provider>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -4,3 +4,9 @@ export const toggle = () => {
         type: TOGGLE
     }
 }
+export const SHOW = 'SHOW_ASYNC';
+export const show = () => {
+    return {
+        type: SHOW
+    }
+}
